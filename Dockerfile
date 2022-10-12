@@ -1,6 +1,6 @@
 FROM node:14-alpine AS build
 WORKDIR /application
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 RUN apk add --no-cache --virtual devtools build-base linux-headers udev python3
 COPY package.json ./
 RUN npm install && npm install node-red --unsafe-perm
