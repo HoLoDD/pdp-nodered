@@ -1,10 +1,8 @@
 FROM node:14-alpine AS build
-ARG GITHUB_TOKEN
 WORKDIR /application
 ENV NODE_ENV=production
 RUN apk add --no-cache --virtual devtools build-base linux-headers udev python3
 COPY package.json ./
-COPY example.npmrc .npmrc
 RUN npm install && npm install node-red --unsafe-perm
 
 FROM node:14-alpine
