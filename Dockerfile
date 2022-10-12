@@ -10,7 +10,7 @@ RUN apk add --no-cache tzdata
 WORKDIR /application
 RUN chown node:node /application
 USER node
-ENV NODE_ENV=production \
+ENV NODE_ENV=development \ //change settings "Editor"
     FLOWS=flows.json \
     APPLICATION_NAME=company-nodered-messanger
 COPY --from=build --chown=node:node /application /application
