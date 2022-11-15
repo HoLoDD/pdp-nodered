@@ -4,6 +4,7 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
+        "custom-node-test": "file:custom-node-test",
         "moment-timezone": "^0.5.32"
     }
 }
